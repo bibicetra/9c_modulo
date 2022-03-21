@@ -1,92 +1,70 @@
 // C++ code
 //
-
-const int led1 = 1;
-const int led2 = 2;
-const int led3 = 3;
-const int led4 = 4;
-const int led5 = 5;
-const int led6 = 6;
-const int led7 = 7;
-const int led8 = 8;
-const int led9 = 9;
-const int led10 = 10;
-const int bot1 = 11;
-const int bot2 = 12;
-const int bot3 = 13;
+  const int bot1 = 4;
+const int bot2 = 5;
+const int bot3 = 6;
+const int bot4 = 7;
+const int bot5 = 8;
+const int bot6 = 9;
+const int bot7 = 10;
 
 void setup()
 {
-  pinMode(led1, OUTPUT);
-  pinMode(led2, OUTPUT);
-  pinMode(led3, OUTPUT);
-  pinMode(led4, OUTPUT);
-  pinMode(led5, OUTPUT);
-  pinMode(led6, OUTPUT);
-  pinMode(led7, OUTPUT);
-  pinMode(led8, OUTPUT);
-  pinMode(led9, OUTPUT);
-  pinMode(led10, OUTPUT);
-  
-  pinMode(bot1,INPUT);
-  pinMode(bot2,INPUT);
-  pinMode(bot3,INPUT);
+Serial.begin(9600);
+  pinMode(4,INPUT);
+  pinMode(5,INPUT);
+  pinMode(6,INPUT);
+  pinMode(7,INPUT);
+  pinMode(8,INPUT);
+    pinMode(9,INPUT);
+  pinMode(10,INPUT);
+
 }
 
 int var;
 int var2;
 int var3;
+int var4;
+int var5;
+int var6;
+int var7;
 
 void loop()
 {
- var = digitalRead(bot1);
- var2 = digitalRead(bot2);
- var3 = digitalRead(bot3);
+
+var = digitalRead(bot1);
+var2 = digitalRead(bot2);
+var3 = digitalRead(bot3);
+var4 = digitalRead(bot4);
+var5 = digitalRead(bot5);
+  var6 = digitalRead(bot6);
+var7 = digitalRead(bot7);
   
   if(var){
-    acendeTudo();
+Serial.println("Re");
   }
   if(var2){
-    apagarTudo();
+Serial.println("do");
   }
   if(var3){
-    acendeQuaseTudo();
+Serial.println("sol");
   }
-}
- void acendeTudo(){
-   digitalWrite(led1,HIGH);
-   digitalWrite(led2,HIGH);
-   digitalWrite(led3,HIGH);
-   digitalWrite(led4,HIGH);
-   digitalWrite(led5,HIGH);
-   digitalWrite(led6,HIGH);
-   digitalWrite(led7,HIGH);
-   digitalWrite(led8,HIGH);
-   digitalWrite(led9,HIGH);
-   digitalWrite(led10,HIGH);
-
-}
-
-void apagarTudo(){
-   digitalWrite(led1,LOW);
-   digitalWrite(led2,LOW);
-   digitalWrite(led3,LOW);
-   digitalWrite(led4,LOW);
-   digitalWrite(led5,LOW); 
-   digitalWrite(led6,LOW);
-   digitalWrite(led7,LOW);
-   digitalWrite(led8,LOW);
-   digitalWrite(led9,LOW); 
-  digitalWrite(led10,LOW); 
-}
-
-void acendeQuaseTudo(){
-   digitalWrite(led2, HIGH);
-   digitalWrite(led4,HIGH);
-   digitalWrite(led6,HIGH);
-   digitalWrite(led8,HIGH);
-   digitalWrite(led10,HIGH);
-  delay(2000);
-  apagarTudo();
-   }
-
+  if(var4){
+Serial.println("mi");
+  }
+  if(var5){
+Serial.println("fa");
+  }
+    if(var4){
+Serial.println("re");
+  }
+  if(var5){
+Serial.println("mi");
+  }
+    if(var6){
+Serial.println("si");
+  }
+  if(var7){
+Serial.println("la");
+  }
+     }
